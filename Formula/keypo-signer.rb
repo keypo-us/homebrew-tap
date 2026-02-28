@@ -5,7 +5,7 @@ class KeypoSigner < Formula
   license "MIT"
 
   url "https://github.com/keypo-us/keypo-signer-cli/releases/download/v#{version}/keypo-signer-#{version}-macos-arm64.tar.gz"
-  sha256 "PLACEHOLDER"
+  sha256 "1e37fc5e7780777468fb5414bd8cdeb9d3a4914f3b38b6762b5a6862a1fb1b83"
 
   depends_on macos: :sonoma
   depends_on arch: :arm64
