@@ -31,8 +31,10 @@ class KeypoWallet < Formula
     EOS
   end
 
+  conflicts_with "keypo-signer", because: "keypo-wallet includes keypo-signer"
+
   test do
-    system "#{bin}/keypo-wallet", "--version"
-    system "#{bin}/keypo-signer", "--version"
+    system "#{bin}/keypo-wallet", "--help"
+    assert_match version.to_s, shell_output("#{bin}/keypo-signer info --system")
   end
 end
