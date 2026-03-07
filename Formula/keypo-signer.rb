@@ -1,11 +1,11 @@
 class KeypoSigner < Formula
   desc "Manage P-256 signing keys in the Apple Secure Enclave"
   homepage "https://github.com/keypo-us/keypo-wallet"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   url "https://github.com/keypo-us/keypo-wallet/releases/download/v#{version}/keypo-wallet-#{version}-macos-arm64.tar.gz"
-  sha256 "68cb9caf9be4c0e008fb4b1e634507298d382ca6d5e2ced155ae8d9c2d4ea552"
+  sha256 "2cb8e055cacd635e1907e41d6b13fe293df4846d53667cd283e432f4c03d3dcc"
 
   depends_on macos: :sonoma
   depends_on arch: :arm64
