@@ -5,7 +5,7 @@ class KeypoOpenclaw < Formula
   license "MIT"
 
   url "https://github.com/keypo-us/keypo-cli/releases/download/openclaw-v#{version}/keypo-openclaw-#{version}-macos-arm64.tar.gz"
-  sha256 "PLACEHOLDER"
+  sha256 "d5b8e1fdd1d5a6223dc15cf423d03577e94418fc14ffaeb4e2ce2d16a911f23f"
 
   depends_on macos: :sonoma
   depends_on arch: :arm64
