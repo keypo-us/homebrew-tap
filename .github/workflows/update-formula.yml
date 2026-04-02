@@ -22,11 +22,13 @@ jobs:
         run: |
           sed -i "s/^  version \".*\"/  version \"${{ inputs.version }}\"/" Formula/keypo-wallet.rb
           sed -i "s/^  sha256 \".*\"/  sha256 \"${{ inputs.sha256 }}\"/" Formula/keypo-wallet.rb
+          sed -i "s/^  version \".*\"/  version \"${{ inputs.version }}\"/" Formula/keypo-signer.rb
+          sed -i "s/^  sha256 \".*\"/  sha256 \"${{ inputs.sha256 }}\"/" Formula/keypo-signer.rb
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Formula/keypo-wallet.rb
+          git add Formula/keypo-wallet.rb Formula/keypo-signer.rb
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update keypo-wallet to ${{ inputs.version }}"
+          git commit -m "Update keypo-wallet and keypo-signer to ${{ inputs.version }}"
           git push
